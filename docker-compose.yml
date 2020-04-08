@@ -1,0 +1,9 @@
+version: '2'
+services:
+    bamboo-agent:
+        image: atlassian/bamboo-agent-base:latest
+        working_dir: /buildeng/bamboo-agent-home/xml-data/build-dir/STBSIV-TSDDC1-JOB1
+        entrypoint: /usr/bin/tail
+        command: -f /dev/null
+        labels:
+            bamboo.job: STBSIV-TSDDC1-JOB1
